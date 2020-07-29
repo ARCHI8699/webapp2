@@ -45,6 +45,20 @@
  <p> Here is your live virtual doctor, click here: https://humain-v2.herokuapp.com/ <p>
 
   <p> Thank you!</p>
+
+## References
+- Work of Mr. Saugata Paul (https://github.com/saugatapaul1010/Medical-AI-Android/tree/master/WebApp) 
+
+- Work of Shobhit Srivastava (https://github.com/shobhitsrivastava-ds/ML-MT-WebApp)
+
+
 ## Author Info
 
 - LinkedIn - [Archibrata Chaudhuri](https://www.linkedin.com/in/archibrata-chaudhuri-02a956188/)
+
+
+
+
+
+
+
