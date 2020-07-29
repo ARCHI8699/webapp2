@@ -4,8 +4,7 @@
 - [References](#references)
 - [Author Info](#author-info)
 ## Description
-![] (static/front.PNG)
-<p> My webapp for Medical Image Analysis..</p>
+<img src="static/front.png">
 <p>The "humAIn" is like your virtual radiologist wwho can analyze your medical report wwith high accuracy </p>
 
 <hr>
