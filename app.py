@@ -67,10 +67,6 @@ def Pneumonia():
     return render_template("index_pneu.html")
 
 
-@app.route("/MRI")
-def MRI():
-    return render_template("index_mri.html")
-
 
 @app.route("/contact")
 def Contact():
@@ -123,7 +119,7 @@ STATIC_FOLDER = 'static'
 
 model_mal = load_model('model111.h5')
 model_pneu = load_model("my_model.h5")
-model_mri = load_model('tumor_prediction.h5')
+
 
 # FOR THE FIRST MODEL
 
@@ -149,15 +145,6 @@ def api1(full_path):
     predicted = model_pneu.predict(data)
     return predicted
 
-# FOR THE Third MODEL
-
-
-def api2(full_path):
-    data = image.load_img(full_path, target_size=(224, 224, 3))
-    data = np.expand_dims(data, axis=0)
-    data = data * 1.0 / 255
-    predicted = model_mri.predict(data)
-    return predicted
 
 
 # procesing uploaded file and predict it
@@ -219,31 +206,7 @@ def upload11_file():
             return redirect(url_for("Pneumonia"))
 
 
-@app.route('/upload111', methods=['POST', 'GET'])
-def upload111_file():
 
-    if request.method == 'GET':
-
-        return render_template('index_mri.html')
-    else:
-
-        try:
-
-            file = request.files['image']
-            full_name = os.path.join(UPLOAD_FOLDER, file.filename)
-            file.save(full_name)
-
-            indices = {0: 'Tumorous', 1: 'Not Tumorous'}
-            result = api2(full_name)
-            print(result)
-
-            predicted_class = np.asscalar(np.argmax(result, axis=1))
-            accuracy = round(result[0][predicted_class] * 100, 2)
-            label = indices[predicted_class]
-            return render_template('predict_mri.html', image_file_name=file.filename, label=label, accuracy=accuracy)
-        except:
-            flash("Invalid selection !!", "danger")
-            return redirect(url_for("MRI"))
 
 
 @app.route('/uploads/<filename>')
