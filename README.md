@@ -37,11 +37,11 @@
 <li><p><b>CSS</b></p></li>
 </ul>
 
-<hr>
+
 ## Future Work
  <p>"humAIn will be able to diagnose many more diseases in neare future such as - MRI,COVID 19 chest xray iimages and so on."</p>
   
-<hr>
+
 ## Deployment
   <p> This webapp has been deployed on Heroku Cloud.
   
