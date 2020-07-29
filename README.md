@@ -1,6 +1,8 @@
 # humAIn-v2.0
 ### Table of Contents
 - [Description](#description)
+- [Future Work](#futuere-work)
+- [Deployment](#deployment)
 - [References](#references)
 - [Author Info](#author-info)
 ## Description
@@ -36,11 +38,11 @@
 </ul>
 
 <hr>
- <h3>Future Work: </h3>
+## Future Work
  <p>"humAIn will be able to diagnose many more diseases in neare future such as - MRI,COVID 19 chest xray iimages and so on."</p>
   
-  <hr>
-  
+<hr>
+## Deployment
   <p> This webapp has been deployed on Heroku Cloud.
   
  <p> Here is your live virtual doctor, click here: https://humain-v2.herokuapp.com/ <p>
