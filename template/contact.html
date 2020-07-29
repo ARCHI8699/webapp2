@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+	<title>Contact Us</title>
+
+	<!-- CSS -->
+
+</head>
+
+
+<body>
+
+
+	<!--Contacts Section-->
+	<section class="contact" id="contact">
+		<div class="container" data-aos="fade-left" data-aos-duration="1200" data-aos-easing="ease-in-out">
+			<div class="section-title">
+				<h1 style="text-align: center;">Connect Us</h1>
+				<p></p>
+			</div>
+			<div class="row mt-2">
+				<div class="col-md-6 d-flex align-items-stretch">
+					<div class="info-box">
+						<i class="fas fa-map-marked-alt"></i>
+						<h3>Address</h3>
+						<p>Asansol. Paschim Bardhaman . West Bengal. India.</p>
+					</div>
+				</div>
+
+				<div class="col-md-6 mt-4 mt-md-0 d-flex align-items-stretch">
+					<div class="info-box">
+						<i class="fas fa-share-alt"></i>
+						<h3>Feedback Form</h3>
+						<a href="https://form.jotform.com/202100801123431">Let us know your feedback</a>
+
+
+
+					</div>
+
+				</div>
+
+
+
+				<div class="col-md-6 mt-4 d-flex align-items-stretch">
+					<div class="info-box">
+						<i class="fas fa-envelope"></i>
+						<h3>Email </h3>
+						<p>archi8699@gmail.com</p>
+					</div>
+				</div>
+				<div class="col-md-6 mt-4 d-flex align-items-stretch">
+					<div class="info-box">
+						<i class="fas fa-phone-alt"></i>
+						<h3>Ring | Whatsapp </h3>
+						<p>+91 8617654629</p>
+					</div>
+				</div>
+			</div>
+
+			<form action="https://formspree.io/archi8699@gmail.com" method="post" role="form"
+				class="php-email-form mt-4">
+
+
+				<div class="form-row">
+
+					<div class="col-md-6 form-group">
+						<input type="text" name="name" class="form-control" id="name" placeholder="Your Name"
+							data-rule="minlen:4"
+							data-msg="Please Enter Your Name Here . Atleast 4 characters required" />
+						<div class="validate"></div>
+					</div>
+
+
+					<div class="col-md-6 form-group">
+						<input type="email" name="email" class="form-control" id="email" placeholder="Your E-Mail"
+							data-rule="email" data-msg="Please Enter Your Email Here" />
+						<div class="validate"></div>
+					</div>
+
+				</div>
+
+
+
+				<div class="form-group">
+
+
+					<input type="text" name="subject" class="form-control" id="subject" placeholder="Subject"
+						data-rule="minlen:4"
+						data-msg="Please Enter Your Subject Here . Atleast 4 characters required" />
+					<div class="validate"></div>
+				</div>
+
+				<div class="form-group">
+
+
+					<textarea name="message" class="form-control" data-msg="Enter Your Message Here.." rows="5"
+						data-rule="required" placeholder="Enter Your Message"></textarea>
+					<div class="validate"></div>
+				</div>
+				<div class="mb-3">
+					<div class="loading">Loading</div>
+					<div class="error-message"></div>
+					<div class="sent-message">Your message has been sent. Thank you!</div>
+				</div>
+				<div class="text-center"><button type="submit">Send Message</button></div>
+
+
+
+
+			</form>
+		</div>
+
+		<div style="text-align:center">
+			<a href="/"><input type="submit" value="Back to Home"></a></div>
+	</section>
+
+
+	<!--End Of Contacts Section-->
+
+</body>
+
+</html>

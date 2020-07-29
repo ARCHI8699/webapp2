@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+  <title>Pneumonia</title>
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<script>
+  function showloading() {
+    image = document.getElementById('loading_image');
+    image.style.display = 'inline'
+  }
+</script>
+
+<style>
+  body {
+    background-image: url("../static/kuWH7b.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    margin-top: 15px;
+  }
+
+  #main-footer {
+    color: #FFFFFF;
+    font-family: "Segoe UI";
+
+    text-align: right;
+    margin-top: 125px;
+    padding: 16px;
+    bottom: 8px;
+  }
+
+  .img_holder img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .btn-file {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .btn-file input[type=file] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    min-width: 100%;
+    min-height: 100%;
+    font-size: 100px;
+    text-align: right;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    outline: none;
+    background: white;
+    cursor: inherit;
+    display: block;
+  }
+
+  #left_m {
+    margin-left: 5px;
+    margin-top: 2px;
+  }
+
+  .fixed-top {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1030;
+  }
+</style>
+
+<body>
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <div class="container">
+        <a class="navbar-brand mr-4" href="/home"><img style="max-width: 100px"
+            src="{{ url_for('static', filename='logo.png') }}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+          aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav mr-auto">
+            <!--a class="nav-item nav-link" href="/">Home</a>-->
+            <a class="nav-item nav-link" href="/about">About</a>
+
+
+            <a class="nav-item nav-link" href="/Pneumonia">Pneumonia</a>
+            <a class="nav-item nav-link" href="/contact">Contact Us</a>
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <header class="container">
+    <div id="left_m" class="col-md-3">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+      {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">
+        {{ message }}
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </div>
+
+    <h3 style="margin: auto;width: 80%; text-align: center; margin-top: 60px;  text-transform: uppercase;color:white">
+      Pneumonia X-Ray Classification</h3>
+
+
+    <form action="/upload11" method="post" enctype="multipart/form-data"
+      style="margin-top:80px; width: 80%; text-align: center; margin: auto;" onsubmit="showloading()">
+      <span class="btn btn-default btn-file">
+        Choose Image <input type="file" name="image">
+      </span><br><br>
+      <input type="submit" value="Upload" class="btn btn-primary">
+    </form>
+    <div style="text-align: center; margin-top: 65px">
+      <img style="max-width: 200px" src="{{ url_for('static', filename='pht_1.gif') }}" />
+    </div>
+    <hr>
+    <div style="text-align:center">
+      <a href="/home"><input type="submit" value="Back to Home"></a></div>
+    <div style="text-align: center">
+      <img id="loading_image" style="display: none" src="{{ url_for('static', filename='loading.gif')}}">
+    </div>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+  </header>
+  <footer id="main-footer">
+    Developed by- Archibrata Chaudhuri | Copyright 2020
+  </footer>
+
+</body>
+
+</html>

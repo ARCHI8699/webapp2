@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+  <!--link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}"-->
+  <title>Home</title>
+
+  <!-- CSS -->
+
+</head>
+<style>
+  body {
+    background-image: url("../static/wp4108517.jpg");
+    background-repeat: no-repeat;
+    background-size: 50%;
+    height: 50%;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: contain;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    margin-top: 15px;
+  }
+
+  h8 {
+    position: absolute;
+    left: 48%;
+    top: 35%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-family: Pacifico, Calibri;
+    font-size: 3em;
+    color: darkturquoise;
+  }
+
+  h1 {
+    position: absolute;
+    left: 48%;
+    top: 42%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-family: Pacifico, Calibri;
+    font-size: 1.5em;
+    color: darkkhaki;
+  }
+
+  #entry {
+    position: absolute;
+    left: 50%;
+    top: 75%;
+    transform: translateX(-50%) translateY(-50%);
+    text-align: center;
+    font-family: Pacifico, Calibri;
+    font-size: 3em;
+
+    color: white
+  }
+
+  #main-footer {
+    color: #FFFFFF;
+    font-family: "Segoe UI";
+
+    text-align: left;
+    margin-top: 550px;
+    padding: 5px;
+    bottom: 8px;
+</style>
+
+<body>
+
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <div class="container">
+
+        <a class="navbar-brand mr-4" href="/"><img style="max-width: 100px"
+            src="{{ url_for('static', filename='logo.png') }}"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+          aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="/about">About</a>
+          </div>
+          <Navbar Right Side <div class="navbar-nav">
+            <a class="nav-item nav-link" href="/homeguest">Guest User</a>
+            <a class="nav-item nav-link" href="/login">Login</a>
+            <a class="nav-item nav-link" href="/signup">Sign Up</a>
+            <a class="nav-item nav-link" href="/contact">Contact Us</a>
+        </div>
+      </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container">
+
+    <div class="col-md-8">
+      {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+      {% for category, message in messages %}
+      <div class="alert alert-{{ category }}">
+        {{ message }}
+      </div>
+      {% endfor %}
+      {% endif %}
+      {% endwith %}
+      {% block content %}{% endblock %}
+    </div>
+
+    <p>
+      <h8>Welcome to humAIn !!</h8>
+    </p>
+    <p>
+    <h1>Your Virtual Doctor 🩺</h1>
+
+    </p>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+
+    <footer id="main-footer">
+
+      Developed by- Archibrata Chaudhuri | UI Design by- Promana Datta | Copyright 2020
+    </footer>
+</body>
+
+</html>
