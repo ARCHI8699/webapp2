@@ -27,6 +27,8 @@
 <ul>
 <li><p><b>Python ( 3.6 version)</b></p></li>
 <li><p><b>Flask</b></p></li>
+<li><p><b>Flask_login</b></p></li>
+<li><p><b>SQLAlchemy</b></p></li>
 <li><p><b>OpenCV</b></p></li>
 <li><p><b>Pandas</b></p></li>
 <li><p><b>Numpy</b></p></li>
@@ -55,7 +57,7 @@
 ## Author Info
 
 - LinkedIn - [Archibrata Chaudhuri](https://www.linkedin.com/in/archibrata-chaudhuri-02a956188/)
-
+- Email - [archi8699@gmail.com]
 
 
 
