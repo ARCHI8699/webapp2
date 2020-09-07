@@ -7,7 +7,7 @@
 - [Author Info](#author-info)
 ## Description
 <img src="static/front.PNG">
-<p>The "humAIn" is like your virtual radiologist wwho can analyze your medical report wwith high accuracy </p>
+<p>The "humAIn" is like your virtual radiologist who can analyze your medical report wwith high accuracy </p>
 
 <hr>
 <h3> As of now it can analyze two disease's report,as following-</h3>
